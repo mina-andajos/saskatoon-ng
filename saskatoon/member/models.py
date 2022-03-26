@@ -53,7 +53,7 @@ class AuthUser(AbstractBaseUser, PermissionsMixin):
 
     # Redefine the basic fields that would normally be defined in User
     email = models.EmailField(
-        validators=[validate_email]
+        validators=[validate_email],
         verbose_name='email address',
         unique=True,
         max_length=255
