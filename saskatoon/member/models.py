@@ -6,7 +6,23 @@ from django.contrib.auth.models import AbstractBaseUser, \
     PermissionsMixin, BaseUserManager
 from django.core.validators import RegexValidator
 from harvest.models import RequestForParticipation, Harvest, Property
+from django.core.exceptions import ValidationError
+import re
 
+regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+
+
+def validate_email(email):
+    if AuthUser.objects.get(email=email):
+        raise ValidationError(
+            _('%(value)s This email has an account already'),
+            params={'email': email},
+        )
+    elif re.fullmatch(regex, email):
+        raise ValidationError(
+            _('%(value)s This email is not a valid email'),
+            params={'email': email},
+        )     
 class AuthUserManager(BaseUserManager):
     def create_user(self, email, password=None):
         if not email:
@@ -37,6 +53,7 @@ class AuthUser(AbstractBaseUser, PermissionsMixin):
 
     # Redefine the basic fields that would normally be defined in User
     email = models.EmailField(
+        validators=[validate_email]
         verbose_name='email address',
         unique=True,
         max_length=255
