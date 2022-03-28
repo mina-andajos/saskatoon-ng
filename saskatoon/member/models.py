@@ -14,13 +14,13 @@ def validate_email(email):
     #check if the email already exist
     if AuthUser.objects.get(email=email):
         raise ValidationError(
-            _('%(value)s This email has an account already'),
+            _('%(email)s This email has an account already'),
             params={'email': email},
         )
      #check if the email match the regex email
     elif re.fullmatch(regex, email):
         raise ValidationError(
-            _('%(value)s This email is not a valid email'),
+            _('%(email)s This email is not a valid email'),
             params={'email': email},
         )     
 
