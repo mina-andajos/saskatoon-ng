@@ -6,7 +6,23 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import ( Group, AbstractBaseUser,
                                          PermissionsMixin, BaseUserManager )
 from django.core.validators import RegexValidator
-from harvest.models import RequestForParticipation, Harvest, Property
+from harvest.models import RequestForParticipation, Harvest, Proper
+from django.core.exceptions import ValidationError
+import re
+regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+def validate_email(email):
+    #check if the email already exist
+    if AuthUser.objects.get(email=email):
+        raise ValidationError(
+            _('%(email)s This email has an account already'),
+            params={'email': email},
+        )
+     #check if the email match the regex email
+    elif re.fullmatch(regex, email):
+        raise ValidationError(
+            _('%(email)s This email is not a valid email'),
+            params={'email': email},
+        )     
 
 AUTH_GROUPS = (
     ('core', _("Core Member")),
@@ -55,6 +71,7 @@ class AuthUser(AbstractBaseUser, PermissionsMixin):
 
     # Redefine the basic fields that would normally be defined in User
     email = models.EmailField(
+        validators=[validate_email],
         verbose_name='email address',
         unique=True,
         max_length=255
