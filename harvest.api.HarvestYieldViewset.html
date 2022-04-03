@@ -6,7 +6,7 @@
 
   <head>
     
-    <title>sitebase.templatetags.get_fruit_name_icon</title>
+    <title>harvest.api.HarvestYieldViewset</title>
     <meta name="generator" content="pydoctor 22.4.0"> 
         
     </meta>
@@ -131,19 +131,19 @@
     <div class="container">
 
       <div class="page-header">
-        <h1 class="module"><code><code><a href="sitebase.html" class="internal-link">sitebase</a></code><wbr></wbr>.<code><a href="sitebase.templatetags.html" class="internal-link" title="sitebase.templatetags">templatetags</a></code><wbr></wbr>.<code><a href="sitebase.templatetags.get_fruit_name_icon.html" class="internal-link" title="sitebase.templatetags.get_fruit_name_icon">get_fruit_name_icon</a></code></code></h1>
+        <h1 class="class"><code><code><a href="harvest.html" class="internal-link">harvest</a></code><wbr></wbr>.<code><a href="harvest.api.html" class="internal-link" title="harvest.api">api</a></code><wbr></wbr>.<code><a href="harvest.api.HarvestYieldViewset.html" class="internal-link" title="harvest.api.HarvestYieldViewset">HarvestYieldViewset</a></code></code></h1>
         <div id="showPrivate">
           <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
         </div>
       </div>
 
       <div class="categoryHeader">
-        module documentation
+        class documentation
       </div>
 
       <div class="extrasDocstring">
-        <a href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/sitebase/templatetags/get_fruit_name_icon.py" class="sourceLink">(source)</a>
-        <p></p>
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">HarvestYieldViewset</span>(LoginRequiredMixin, viewsets.ModelViewSet): <a href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/harvest/api.py#L227" class="sourceLink">(source)</a></code></p>
+        <p><a href="classIndex.html#harvest.api.HarvestYieldViewset">View In Hierarchy</a></p>
       </div>
 
       <div class="moduleDocstring">
@@ -151,23 +151,33 @@
       </div>
 
       <div id="splitTables">
-        <table class="children sortable" id="id5">
+        <table class="children sortable" id="id27">
   
   
-  <tr class="function">
+  <tr class="method">
     
-    <td>Function</td>
-    <td><code><a href="#get_fruit_name_icon" class="internal-link" title="sitebase.templatetags.get_fruit_name_icon.get_fruit_name_icon">get​_fruit​_name​_icon</a></code></td>
-    <td>Returns the icon mapped to the tree's fruit name</td>
-  </tr><tr class="constant">
-    
-    <td>Constant</td>
-    <td><code><a href="#FRUIT_NAME_ICONS" class="internal-link" title="sitebase.templatetags.get_fruit_name_icon.FRUIT_NAME_ICONS">FRUIT​_NAME​_ICONS</a></code></td>
+    <td>Method</td>
+    <td><code><a href="#list" class="internal-link" title="harvest.api.HarvestYieldViewset.list">list</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="variable">
+  </tr><tr class="classvariable">
     
-    <td>Variable</td>
-    <td><code><a href="#register" class="internal-link" title="sitebase.templatetags.get_fruit_name_icon.register">register</a></code></td>
+    <td>Class Variable</td>
+    <td><code><a href="#filter_backends" class="internal-link" title="harvest.api.HarvestYieldViewset.filter_backends">filter​_backends</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#filterset_fields" class="internal-link" title="harvest.api.HarvestYieldViewset.filterset_fields">filterset​_fields</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#queryset" class="internal-link" title="harvest.api.HarvestYieldViewset.queryset">queryset</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#template_name" class="internal-link" title="harvest.api.HarvestYieldViewset.template_name">template​_name</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
@@ -178,19 +188,19 @@
 
       <div id="childList">
 
-        <div class="basefunction">
+        <div class="basemethod">
   
   
-  <a name="sitebase.templatetags.get_fruit_name_icon.get_fruit_name_icon">
+  <a name="harvest.api.HarvestYieldViewset.list">
     
   </a>
-  <a name="get_fruit_name_icon">
+  <a name="list">
     
   </a>
   <div class="functionHeader">
-    @register.filter<br />@stringfilter<br />
-    <span class="py-keyword">def</span> <span class="py-defname">get_fruit_name_icon</span>(fruit_name):
-    <a class="sourceLink" href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/sitebase/templatetags/get_fruit_name_icon.py#L47">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">list</span>(self, request, *args, **kwargs):
+    <a class="sourceLink" href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/harvest/api.py#L235">
       
       (source)
     </a>
@@ -198,21 +208,21 @@
   <div class="docstring functionBody">
     
     
-    <div>Returns the icon mapped to the tree's fruit name<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fruit​_name:</span><code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+    <div><p class="undocumented">Undocumented</p></div>
   </div>
-</div><div class="baseconstant">
+</div><div class="baseclassvariable">
   
   
-  <a name="sitebase.templatetags.get_fruit_name_icon.FRUIT_NAME_ICONS">
+  <a name="harvest.api.HarvestYieldViewset.filter_backends">
     
   </a>
-  <a name="FRUIT_NAME_ICONS">
+  <a name="filter_backends">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-defname">FRUIT_NAME_ICONS</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>, <wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> =
-    <a class="sourceLink" href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/sitebase/templatetags/get_fruit_name_icon.py#L6">
+    <span class="py-defname">filter_backends</span> =
+    <a class="sourceLink" href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/harvest/api.py#L231">
       
       (source)
     </a>
@@ -221,28 +231,67 @@
     
     
     <div><p class="undocumented">Undocumented</p></div>
-    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>{<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">Grapes</span><span class="rst-variable-quote">'</span>: <span class="rst-variable-quote">'</span><span class="rst-variable-string">🍇</span><span class="rst-variable-quote">'</span>,
- <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">Melon</span><span class="rst-variable-quote">'</span>: <span class="rst-variable-quote">'</span><span class="rst-variable-string">🍈</span><span class="rst-variable-quote">'</span>,
- <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">Watermelon</span><span class="rst-variable-quote">'</span>: <span class="rst-variable-quote">'</span><span class="rst-variable-string">🍉</span><span class="rst-variable-quote">'</span>,
- <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">Tangerine</span><span class="rst-variable-quote">'</span>: <span class="rst-variable-quote">'</span><span class="rst-variable-string">🍊</span><span class="rst-variable-quote">'</span>,
- <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">Lemon</span><span class="rst-variable-quote">'</span>: <span class="rst-variable-quote">'</span><span class="rst-variable-string">🍋</span><span class="rst-variable-quote">'</span>,
- <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">Banana</span><span class="rst-variable-quote">'</span>: <span class="rst-variable-quote">'</span><span class="rst-variable-string">🍌</span><span class="rst-variable-quote">'</span>,
- <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">Pineapple</span><span class="rst-variable-quote">'</span>: <span class="rst-variable-quote">'</span><span class="rst-variable-string">🍍</span><span class="rst-variable-quote">'</span>,
-<span class="rst-variable-ellipsis">...</span></code></pre></td></tr></table>
+    
   </div>
-</div><div class="basevariable">
+</div><div class="baseclassvariable">
   
   
-  <a name="sitebase.templatetags.get_fruit_name_icon.register">
+  <a name="harvest.api.HarvestYieldViewset.filterset_fields">
     
   </a>
-  <a name="register">
+  <a name="filterset_fields">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-defname">register</span> =
-    <a class="sourceLink" href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/sitebase/templatetags/get_fruit_name_icon.py#L4">
+    <span class="py-defname">filterset_fields</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
+    <a class="sourceLink" href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/harvest/api.py#L233">
+      
+      (source)
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="harvest.api.HarvestYieldViewset.queryset">
+    
+  </a>
+  <a name="queryset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">queryset</span> =
+    <a class="sourceLink" href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/harvest/api.py#L229">
+      
+      (source)
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="harvest.api.HarvestYieldViewset.template_name">
+    
+  </a>
+  <a name="template_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">template_name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
+    <a class="sourceLink" href="https://github.com/LesFruitsDefendus/saskatoon-ng/tree/develop/saskatoon/harvest/api.py#L228">
       
       (source)
     </a>
@@ -264,7 +313,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/LesFruitsDefendus/saskatoon-ng" class="projecthome">Saskatoon-Dev</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.4.0 at 2022-04-03 16:12:37.
+    22.4.0 at 2022-04-03 21:28:15.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
